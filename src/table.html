@@ -492,37 +492,17 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <%=dateTable.forEach(item=>{%>
+                      <%table.forEach(item =>{%>
                       <tr>
                         <th scope="row"><%=item.scope%></th>
-                        <td><%=item.firsname%></td>
+                        <td><%=item.firstname%></td>
                         <td><%=item.lastname%></td>
                         <td><%=item.email%></td>
                         <td><%=item.country%></td>
+                        <td><%=item.zip%></td>
                         <td><%=item.status%></td>
-                        <td><%=item.mamber%></td>
                       </tr>
-                      <tr>
-                        <th scope="row"><%=item.scope%></th>
-                        <td><%=item.firsname%></td>
-                        <td><%=item.lastname%></td>
-                        <td><%=item.email%></td>
-                        <td><%=item.country%></td>
-                        <td><%=item.status%></td>
-                        <td><%=item.mamber%></td>
-                      </tr>
-                      </tr>
-                      <tr>
-                        <th scope="row"><%=item.scope%></th>
-                        <td><%=item.firsname%></td>
-                        <td><%=item.lastname%></td>
-                        <td><%=item.email%></td>
-                        <td><%=item.country%></td>
-                        <td><%=item.status%></td>
-                        <td><%=item.mamber%></td>
-                      </tr>
-                      </tr>
-                      <%=})%>
+                      <%})%>
                     </tbody>
                   </table>
                 </div>

@@ -6,9 +6,9 @@ const app = express();
 const PORT = 3000;
 
 app.use("/lib", express.static("lib"));
-app.use("/img", express.static("img"));
-app.use("/css", express.static("css"));
 app.use("/js", express.static("js"));
+app.use("/css", express.static("css"));
+app.use("/img", express.static("img"));
 
 const dateTable = [
   {
@@ -41,7 +41,7 @@ const dateTable = [
 ];
 
 app.get("/index.html", async (req, res) => {
-  const view = await fs.readFile("./index.html", "utf8");
+  const view = await fs.readFile("./src/index.html", "utf8");
   const home = ejs.render(view, {
     projectName: "My Project",
     userName: "Jamshiddin",
@@ -49,7 +49,7 @@ app.get("/index.html", async (req, res) => {
   res.send(home);
 });
 app.get("/404.html", async (req, res) => {
-  const view = await fs.readFile("./404.html", "utf8");
+  const view = await fs.readFile(".//src/404.html", "utf8");
   const home = ejs.render(view, {
     projectName: "My Project",
     userName: "Jamshiddin",
@@ -57,7 +57,7 @@ app.get("/404.html", async (req, res) => {
   res.send(home);
 });
 app.get("/blank.html", async (req, res) => {
-  const view = await fs.readFile("./blank.html", "utf8");
+  const view = await fs.readFile("./src/blank.html", "utf8");
   const home = ejs.render(view, {
     projectName: "My Project",
     userName: "Jamshiddin",
@@ -65,7 +65,7 @@ app.get("/blank.html", async (req, res) => {
   res.send(home);
 });
 app.get("/chart.html", async (req, res) => {
-  const view = await fs.readFile("./chart.html", "utf8");
+  const view = await fs.readFile("./src/chart.html", "utf8");
   const home = ejs.render(view, {
     projectName: "My Project",
     userName: "Jamshiddin",
@@ -73,7 +73,7 @@ app.get("/chart.html", async (req, res) => {
   res.send(home);
 });
 app.get("/signin.html", async (req, res) => {
-  const view = await fs.readFile("./signin.html", "utf8");
+  const view = await fs.readFile("./src/signin.html", "utf8");
   const home = ejs.render(view, {
     projectName: "My Project",
     userName: "Jamshiddin",
@@ -81,7 +81,7 @@ app.get("/signin.html", async (req, res) => {
   res.send(home);
 });
 app.get("/signup.html", async (req, res) => {
-  const view = await fs.readFile("./signup.html", "utf8");
+  const view = await fs.readFile("./src/signup.html", "utf8");
   const home = ejs.render(view, {
     projectName: "My Project",
     userName: "Jamshiddin",
@@ -89,7 +89,7 @@ app.get("/signup.html", async (req, res) => {
   res.send(home);
 });
 app.get("/table.html", async (req, res) => {
-  const view = await fs.readFile("./table.html", "utf8");
+  const view = await fs.readFile("./src/table.html", "utf8");
   const home = ejs.render(view, {
     projectName: "My Project",
     userName: "Jamshiddin",
@@ -98,7 +98,7 @@ app.get("/table.html", async (req, res) => {
   res.send(home);
 });
 app.get("/widget.html", async (req, res) => {
-  const view = await fs.readFile("./widget.html", "utf8");
+  const view = await fs.readFile("./src/widget.html", "utf8");
   const home = ejs.render(view, {
     projectName: "My Project",
     userName: "Jamshiddin",
