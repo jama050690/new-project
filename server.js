@@ -91,5 +91,5 @@ app.use(async (req, res) => {
 
 // ================= START =================
 app.listen(PORT, () => {
-  console.log(`✅ HTML+EJS server running: http://localhost:${PORT}`);
+  console.log(` HTML+EJS server running: http://localhost:${PORT}`);
 });
